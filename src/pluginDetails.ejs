@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <meta name="description" content="<%= description %>">
+  <!-- Fonts and Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="./assets/css/styles.css">
+
+  
+  <!-- Custom Styles -->
+  <style>
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1a1a21;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #16a34a;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #22c55e;
+    }
+    
+    /* Gradient animations */
+    .animate-gradient {
+      background-size: 200% 200%;
+      animation: gradient 8s ease infinite;
+    }
+    
+    .hero-gradient {
+      background: linear-gradient(135deg, #15803d, #22c55e, #4ade80, #22c55e, #15803d);
+      background-size: 300% 300%;
+      animation: gradient 8s ease infinite;
+    }
+    
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    /* Accessibility */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+  </style>
+  
+</head>
+<body class="bg-dark-base text-white min-h-screen flex flex-col">
+  
+  <%- include('componets/header') %>
+  
+  <main class="flex-grow">
+    <div class="container mx-auto px-4 py-12">
+      <!-- Breadcrumbs -->
+      <div class="mb-8">
+        <div class="flex items-center text-sm text-gray-400">
+          <a href="/" class="hover:text-primary-400 transition-colors">Home</a>
+          <span class="mx-2">/</span>
+          <a href="/plugins" class="hover:text-primary-400 transition-colors">Plugins</a>
+          <span class="mx-2">/</span>
+          <span class="text-primary-400"><%= plugin.name %></span>
+        </div>
+      </div>
+      
+      <!-- Plugin Header -->
+      <div class="bg-dark-light rounded-xl overflow-hidden mb-8">
+        <div class="h-64 bg-gradient-to-br from-primary-600/20 to-primary-800/20 flex items-center justify-center">
+          <div class="h-32 w-32 bg-primary-600 rounded-xl flex items-center justify-center text-white font-bold text-5xl">
+            <%= plugin.name.charAt(0) %>
+          </div>
+        </div>
+        <div class="p-8">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-6">
+            <div>
+              <div class="flex items-center gap-3 mb-2">
+                <h1 class="text-3xl font-bold"><%= plugin.name %></h1>
+                <% if (plugin.premium) { %>
+                  <span class="bg-primary-600/20 text-primary-400 text-sm px-3 py-1 rounded-full">Premium</span>
+                <% } else { %>
+                  <span class="bg-green-600/20 text-green-400 text-sm px-3 py-1 rounded-full">Free</span>
+                <% } %>
+              </div>
+              <p class="text-gray-400 text-lg"><%= plugin.desc %></p>
+            </div>
+            <div class="flex flex-col items-end">
+              <div class="text-right mb-4">
+                <% if (plugin.premium) { %>
+                  <div class="text-gray-400 text-sm mb-1">Price</div>
+                  <div class="text-2xl font-bold text-white">$<%= plugin.price.toFixed(2) %></div>
+                <% } else { %>
+                  <div class="text-gray-400 text-sm mb-1">Price</div>
+                  <div class="text-2xl font-bold text-green-400">Free</div>
+                <% } %>
+              </div>
+              <a href="#" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 transition-colors">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                </svg>
+                Download Plugin
+              </a>
+            </div>
+          </div>
+          
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 py-4 border-t border-b border-dark-lighter">
+            <div>
+              <div class="text-gray-400 text-sm">Version</div>
+              <div class="font-medium">v<%= plugin.version %></div>
+            </div>
+            <div>
+              <div class="text-gray-400 text-sm">Category</div>
+              <div class="font-medium"><%= plugin.category %></div>
+            </div>
+            <div>
+              <div class="text-gray-400 text-sm">Downloads</div>
+              <div class="font-medium"><%= plugin.downloads.toLocaleString() %></div>
+            </div>
+            <div>
+              <div class="text-gray-400 text-sm">Last Updated</div>
+              <div class="font-medium">June 15, 2023</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Plugin Content -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Main Content -->
+        <div class="lg:col-span-2">
+          <div class="bg-dark-light rounded-xl p-8 mb-8">
+            <h2 class="text-2xl font-bold mb-6">Description</h2>
+            <div class="prose prose-invert max-w-none">
+              <p class="mb-4">
+                <%= plugin.name %> is a powerful Minecraft plugin designed to enhance your server experience. 
+                With a focus on performance and user-friendly features, this plugin is perfect for server owners 
+                looking to provide their players with a unique gameplay experience.
+              </p>
+              
+              <h3 class="text-xl font-semibold mt-6 mb-3">Key Features</h3>
+              <ul class="list-disc pl-5 space-y-2 mb-6">
+                <li>Easy to configure and customize to your server's needs</li>
+                <li>Optimized for performance with minimal impact on server resources</li>
+                <li>Regular updates and dedicated support</li>
+                <li>Compatible with most popular Minecraft server versions</li>
+                <li>Extensive documentation and setup guides</li>
+              </ul>
+              
+              <h3 class="text-xl font-semibold mt-6 mb-3">Requirements</h3>
+              <ul class="list-disc pl-5 space-y-2 mb-6">
+                <li>Minecraft Server: Spigot, Paper, or Purpur</li>
+                <li>Minecraft Version: 1.16.5 or higher</li>
+                <li>Java 16 or higher</li>
+              </ul>
+              
+              <h3 class="text-xl font-semibold mt-6 mb-3">Installation</h3>
+              <ol class="list-decimal pl-5 space-y-2 mb-6">
+                <li>Download the plugin JAR file</li>
+                <li>Place the JAR file in your server's plugins folder</li>
+                <li>Restart your server</li>
+                <li>Configure the plugin using the generated config.yml file</li>
+                <li>Restart your server again to apply changes</li>
+              </ol>
+            </div>
+          </div>
+          
+          <div class="bg-dark-light rounded-xl p-8">
+            <h2 class="text-2xl font-bold mb-6">Commands</h2>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left">
+                <thead>
+                  <tr class="border-b border-dark-lighter">
+                    <th class="pb-3 pr-4">Command</th>
+                    <th class="pb-3 pr-4">Permission</th>
+                    <th class="pb-3">Description</th>
+                  </tr>
+                </thead>
+                <tbody class="text-gray-300">
+                  <tr class="border-b border-dark-lighter">
+                    <td class="py-3 pr-4 font-mono text-sm">/umbraix help</td>
+                    <td class="py-3 pr-4">umbraix.help</td>
+                    <td class="py-3">Shows the help menu</td>
+                  </tr>
+                  <tr class="border-b border-dark-lighter">
+                    <td class="py-3 pr-4 font-mono text-sm">/umbraix reload</td>
+                    <td class="py-3 pr-4">umbraix.admin</td>
+                    <td class="py-3">Reloads the plugin configuration</td>
+                  </tr>
+                  <tr class="border-b border-dark-lighter">
+                    <td class="py-3 pr-4 font-mono text-sm">/umbraix status</td>
+                    <td class="py-3 pr-4">umbraix.status</td>
+                    <td class="py-3">Shows the plugin status</td>
+                  </tr>
+                  <tr>
+                    <td class="py-3 pr-4 font-mono text-sm">/umbraix settings</td>
+                    <td class="py-3 pr-4">umbraix.admin</td>
+                    <td class="py-3">Opens the settings menu</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Sidebar -->
+        <div class="lg:col-span-1">
+          <div class="bg-dark-light rounded-xl p-6 mb-6">
+            <h3 class="text-xl font-semibold mb-4">Support</h3>
+            <p class="text-gray-400 mb-4">Need help with this plugin? Our support team is ready to assist you.</p>
+            <a href="/contact" class="inline-flex items-center justify-center w-full px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 transition-colors">
+              Contact Support
+            </a>
+          </div>
+          
+          <div class="bg-dark-light rounded-xl p-6 mb-6">
+            <h3 class="text-xl font-semibold mb-4">Documentation</h3>
+            <p class="text-gray-400 mb-4">Check out our comprehensive documentation for detailed setup instructions.</p>
+            <a href="#" class="inline-flex items-center justify-center w-full px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 transition-colors">
+              View Documentation
+            </a>
+          </div>
+          
+          <div class="bg-dark-light rounded-xl p-6">
+            <h3 class="text-xl font-semibold mb-4">Related Plugins</h3>
+            <ul class="space-y-4">
+              <li>
+                <a href="/plugins/jobs" class="flex items-center p-3 rounded-lg hover:bg-dark-lighter transition-colors">
+                  <div class="h-10 w-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold text-lg mr-3">
+                    U
+                  </div>
+                  <div>
+                    <div class="font-medium">Umbraix Jobs</div>
+                    <div class="text-gray-400 text-sm">A free Jobs Reborn alternative</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="/plugins/chat" class="flex items-center p-3 rounded-lg hover:bg-dark-lighter transition-colors">
+                  <div class="h-10 w-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold text-lg mr-3">
+                    U
+                  </div>
+                  <div>
+                    <div class="font-medium">Umbraix Chat</div>
+                    <div class="text-gray-400 text-sm">Advanced chat formatting and channels</div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="/plugins/shop" class="flex items-center p-3 rounded-lg hover:bg-dark-lighter transition-colors">
+                  <div class="h-10 w-10 bg-primary-600 rounded-lg flex items-center justify-center text-white font-bold text-lg mr-3">
+                    U
+                  </div>
+                  <div>
+                    <div class="font-medium">Umbraix Shop</div>
+                    <div class="text-gray-400 text-sm">Create GUI shops with custom items</div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <%- include('componets/footer') %>
+  
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

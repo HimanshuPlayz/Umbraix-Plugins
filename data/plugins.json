@@ -1,0 +1,32 @@
+[
+  {
+    "id": "jobs",
+    "name": "Umbraix Jobs",
+    "desc": "A free Jobs Reborn alternative",
+    "price": 0,
+    "downloads": 120,
+    "category": "Economy",
+    "version": "1.0.0",
+    "premium": false
+  },
+  {
+    "id": "chat",
+    "name": "Umbraix Chat",
+    "desc": "Advanced chat formatting and channels",
+    "price": 9.99,
+    "downloads": 85,
+    "category": "Utility",
+    "version": "2.1.0",
+    "premium": true
+  },
+  {
+    "id": "shop",
+    "name": "Umbraix Shop",
+    "desc": "Create GUI shops with custom items",
+    "price": 0,
+    "downloads": 95,
+    "category": "Economy",
+    "version": "1.5.2",
+    "premium": false
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "path": "/",
+    "template": "index.ejs",
+    "title": "Umbraix Plugins | Minecraft Server Plugins",
+    "description": "High-quality Minecraft plugins for your server. Free and premium options available."
+  },
+  {
+    "path": "/plugins",
+    "template": "plugins.ejs",
+    "title": "Browse Plugins | Umbraix Plugins",
+    "description": "Explore our collection of high-quality Minecraft server plugins."
+  },
+  {
+    "path": "/plugins/:id",
+    "template": "pluginDetails.ejs",
+    "title": "Plugin Details | Umbraix Plugins",
+    "description": "View details, features, and download options for this Minecraft plugin."
+  },
+  {
+    "path": "/about",
+    "template": "about.ejs",
+    "title": "About Us | Umbraix Plugins",
+    "description": "Learn about the Umbraix team and our mission to create high-quality Minecraft plugins."
+  },
+  {
+    "path": "/contact",
+    "template": "contact.ejs",
+    "title": "Contact Us | Umbraix Plugins",
+    "description": "Get in touch with the Umbraix team for support, feedback, or collaboration."
+  },
+  {
+    "path": "*",
+    "template": "404.ejs",
+    "title": "Page Not Found | Umbraix Plugins",
+    "description": "The page you are looking for does not exist."
+  }
+]

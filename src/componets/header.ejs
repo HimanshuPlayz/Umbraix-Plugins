@@ -1,0 +1,52 @@
+<%
+// Set default path if not provided
+var path = typeof path !== 'undefined' ? path : '';
+%>
+<header class="sticky top-0 z-50 w-full backdrop-blur-md bg-dark-base/80 border-b border-dark-lighter">
+  <div class="container mx-auto px-4 md:px-6">
+    <nav class="flex items-center justify-between h-16 md:h-20">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2">
+        <img src="/assets/img/Umbraix-Plugins-Trans.png" alt="Umbraix Plugins" class="h-12 w-auto transition-transform duration-300 hover:scale-105" />
+        <span class="text-xl font-bold">Umbraix<span class="text-primary-500">Plugins</span></span>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center gap-6">
+        <a href="/" class="<%= path === '/' ? 'text-white bg-primary-500/20 px-4 py-2 rounded-lg font-medium' : 'text-gray-300 hover:text-white hover:bg-primary-500/10 px-4 py-2 rounded-lg' %> transition-all duration-300">Home</a>
+        <a href="/plugins" class="<%= path === '/plugins' ? 'text-white bg-primary-500/20 px-4 py-2 rounded-lg font-medium' : 'text-gray-300 hover:text-white hover:bg-primary-500/10 px-4 py-2 rounded-lg' %> transition-all duration-300">Plugins</a>
+        <a href="/about" class="<%= path === '/about' ? 'text-white bg-primary-500/20 px-4 py-2 rounded-lg font-medium' : 'text-gray-300 hover:text-white hover:bg-primary-500/10 px-4 py-2 rounded-lg' %> transition-all duration-300">About</a>
+        <a href="/contact" class="<%= path === '/contact' ? 'text-white bg-primary-500/20 px-4 py-2 rounded-lg font-medium' : 'text-gray-300 hover:text-white hover:bg-primary-500/10 px-4 py-2 rounded-lg' %> transition-all duration-300">Contact</a>
+      </div>
+      
+      <!-- Auth Buttons -->
+      <div class="hidden md:flex items-center gap-3">
+        <a href="/login" class="px-4 py-2 text-sm font-medium text-white hover:text-primary-300 transition-colors">Login</a>
+        <a href="/register" class="px-4 py-2 text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 rounded-lg transition-all">Sign Up</a>
+      </div>
+      
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-dark-lighter">
+        <span class="sr-only">Open menu</span>
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </nav>
+    
+    <!-- Mobile Menu (hidden by default) -->
+    <div id="mobile-menu" class="md:hidden hidden bg-dark-light rounded-lg mt-2 p-4">
+      <div class="flex flex-col space-y-3">
+        <a href="/" class="<%= path === '/' ? 'text-white bg-primary-500/20 px-4 py-2 rounded-lg font-medium' : 'text-gray-300 hover:text-white hover:bg-primary-500/10 px-4 py-2 rounded-lg' %> block">Home</a>
+        <a href="/plugins" class="<%= path === '/plugins' ? 'text-white bg-primary-500/20 px-4 py-2 rounded-lg font-medium' : 'text-gray-300 hover:text-white hover:bg-primary-500/10 px-4 py-2 rounded-lg' %> block">Plugins</a>
+        <a href="/about" class="<%= path === '/about' ? 'text-white bg-primary-500/20 px-4 py-2 rounded-lg font-medium' : 'text-gray-300 hover:text-white hover:bg-primary-500/10 px-4 py-2 rounded-lg' %> block">About</a>
+        <a href="/contact" class="<%= path === '/contact' ? 'text-white bg-primary-500/20 px-4 py-2 rounded-lg font-medium' : 'text-gray-300 hover:text-white hover:bg-primary-500/10 px-4 py-2 rounded-lg' %> block">Contact</a>
+        
+        <div class="pt-4 border-t border-dark-lighter flex flex-col space-y-3">
+          <a href="/login" class="py-2 text-center text-white hover:text-primary-300 transition-colors">Login</a>
+          <a href="/register" class="py-2 text-center text-white bg-primary-600 hover:bg-primary-700 rounded-lg transition-all">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

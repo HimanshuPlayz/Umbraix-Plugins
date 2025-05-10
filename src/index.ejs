@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Umbraix Plugins | Minecraft Server Plugins</title>
+  <meta name="description" content="High-quality Minecraft plugins for your server. Free and premium options available.">
+  <link rel="icon" type="image/png" href="./assets/img/Umbraix-Plugins-Trans.png"/>
+  
+  <!-- Fonts and Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="./assets/css/styles.css">
+
+  <!-- Custom Styles -->
+  <style>
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1a1a21;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #16a34a;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #22c55e;
+    }
+    
+    /* Gradient animations */
+    .animate-gradient {
+      background-size: 200% 200%;
+      animation: gradient 8s ease infinite;
+    }
+    
+    .hero-gradient {
+      background: linear-gradient(135deg, #15803d, #22c55e, #4ade80, #22c55e, #15803d);
+      background-size: 300% 300%;
+      animation: gradient 8s ease infinite;
+    }
+    
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    /* Accessibility */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+  </style>
+</head>
+
+<body class="bg-dark-base text-white antialiased">
+  <!-- Skip to content link for accessibility -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:p-4 focus:bg-primary-600 focus:text-white">Skip to content</a>
+  
+  <!-- Header/Navbar -->
+  <%- include('./componets/header') %>
+
+  <main id="main-content">
+    <!-- Hero Section - Completely Redesigned -->
+    <section class="relative overflow-hidden min-h-screen flex items-center py-20 md:py-28 lg:py-32">
+      <!-- Enhanced Background Effects -->
+      <div class="absolute inset-0 bg-dark-base z-0">
+        <!-- Animated gradient blobs with improved colors and positions -->
+        <div class="absolute top-0 right-0 w-3/4 h-3/4 bg-gradient-to-br from-primary-900/20 to-primary-700/10 rounded-full blur-3xl transform translate-x-1/4 -translate-y-1/4 animate-pulse-slow"></div>
+        <div class="absolute bottom-0 left-0 w-3/4 h-3/4 bg-gradient-to-tr from-primary-800/20 to-primary-600/10 rounded-full blur-3xl transform -translate-x-1/4 translate-y-1/4 animate-pulse-slow" style="animation-delay: 2s"></div>
+        
+        <!-- Additional subtle blobs with better positioning -->
+        <div class="absolute top-1/4 left-1/3 w-96 h-96 bg-primary-700/5 rounded-full blur-3xl opacity-60 animate-float" style="animation-delay: 1s"></div>
+        <div class="absolute bottom-1/4 right-1/3 w-96 h-96 bg-primary-800/5 rounded-full blur-3xl opacity-60 animate-float" style="animation-delay: 0.5s"></div>
+        <div class="absolute top-2/3 right-1/4 w-64 h-64 bg-primary-600/5 rounded-full blur-2xl opacity-50 animate-float" style="animation-delay: 1.5s"></div>
+      </div>
+      
+      <!-- Enhanced Grid Pattern with subtle animation -->
+      <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMzMTJlODEiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PHBhdGggZD0iTTM2IDM0djZoNnYtNmgtNnptNiAwaDZ2LTZoLTZ2NnptMCA2djZoNnYtNmgtNnptNi02aDZ2LTZoLTZ2NnoiLz48L2c+PC9nPjwvc3ZnPg==')]" opacity-15 z-0 animate-pulse-slow" style="animation-duration: 15s"></div>
+      
+      <!-- Enhanced particle effects scattered throughout -->
+      <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute top-1/4 left-1/4 w-1.5 h-1.5 bg-primary-400 rounded-full animate-ping" style="animation-duration: 3s"></div>
+        <div class="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-primary-400 rounded-full animate-ping" style="animation-duration: 4s; animation-delay: 1s"></div>
+        <div class="absolute bottom-1/3 left-1/2 w-1.5 h-1.5 bg-primary-400 rounded-full animate-ping" style="animation-duration: 5s; animation-delay: 2s"></div>
+        <div class="absolute top-2/3 right-1/4 w-1.5 h-1.5 bg-primary-400 rounded-full animate-ping" style="animation-duration: 3.5s; animation-delay: 0.5s"></div>
+        <div class="absolute top-1/3 right-1/2 w-1.5 h-1.5 bg-primary-400 rounded-full animate-ping" style="animation-duration: 4.5s; animation-delay: 1.5s"></div>
+        <div class="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-primary-400 rounded-full animate-ping" style="animation-duration: 5.5s; animation-delay: 2.5s"></div>
+      </div>
+      
+      <div class="container mx-auto px-4 md:px-6 relative z-10">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <div class="flex-1 text-center lg:text-left max-w-3xl mx-auto lg:mx-0">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary-900/50 text-primary-300 mb-6 border border-primary-800/30 shadow-lg shadow-primary-900/10 transform hover:scale-105 transition-all duration-300">
+              <span class="w-2 h-2 rounded-full bg-primary-400 mr-2 animate-pulse"></span>
+              <span class="tracking-wide">Minecraft Server Plugins</span>
+            </span>
+            
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 animate-fade-in">
+              <span class="block text-3xl md:text-4xl lg:text-5xl text-gray-300 mb-2">Enhance Your Server with</span>
+              <span class="bg-gradient-to-r from-primary-500 via-primary-400 to-primary-600 text-transparent bg-clip-text relative inline-block animate-gradient">
+                Umbraix
+                <span class="absolute -top-1 -right-1 w-3 h-3 bg-primary-400 rounded-full animate-ping opacity-75"></span>
+              </span> 
+              <span class="relative whitespace-nowrap text-white animate-gradient">
+                Plugins
+                <svg aria-hidden="true" viewBox="0 0 418 42" class="absolute left-0 top-full mt-1 h-[0.58em] w-full fill-primary-500/40" preserveAspectRatio="none">
+                  <path d="M203.371.916c-26.013-2.078-76.686 1.963-124.73 9.946L67.3 12.749C35.421 18.062 18.2 21.766 6.004 25.934 1.244 27.561.828 27.778.874 28.61c.07 1.214.828 1.121 9.595-1.176 9.072-2.377 17.15-3.92 39.246-7.496C123.565 7.986 157.869 4.492 195.942 5.046c7.461.108 19.25 1.696 19.17 2.582-.107 1.183-7.874 4.31-25.75 10.366-21.992 7.45-35.43 12.534-36.701 13.884-2.173 2.308-.202 4.407 4.442 4.734 2.654.187 3.263.157 15.593-.78 35.401-2.686 57.944-3.488 88.365-3.143 46.327.526 75.721 2.23 130.788 7.584 19.787 1.924 20.814 1.98 24.557 1.332l.066-.011c1.201-.203 1.53-1.825.399-2.335-2.911-1.31-4.893-1.604-22.048-3.261-57.509-5.556-87.871-7.36-132.059-7.842-23.239-.254-33.617-.116-50.627.674-11.629.54-42.371 2.494-46.696 2.967-2.359.259 8.133-3.625 26.504-9.81 23.239-7.825 27.934-10.149 28.304-14.005.417-4.348-3.529-6-16.878-7.066Z" />
+                </svg>
+              </span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed animate-fade-in" style="animation-delay: 0.2s">
+              Free and premium Minecraft plugins to enhance your server experience. Built with <span class="text-primary-300 font-medium">performance</span> and <span class="text-primary-300 font-medium">reliability</span> in mind by developers who understand your needs.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in" style="animation-delay: 0.4s">
+              <a href="/plugins" class="group relative px-8 py-3 rounded-lg bg-primary-600 hover:bg-primary-700 text-white font-medium transition-all shadow-lg shadow-primary-600/20 hover:shadow-primary-600/40 overflow-hidden">
+                <span class="absolute inset-0 w-full h-full transition-all duration-300 scale-0 group-hover:scale-100 group-hover:bg-primary-500/20 rounded-lg"></span>
+                <span class="relative flex items-center justify-center">Browse Plugins
+                  <svg class="w-5 h-5 ml-2 inline-block group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                  </svg>
+                </span>
+              </a>
+              <a href="#features" class="group relative px-8 py-3 rounded-lg bg-dark-light hover:bg-dark-lighter text-white font-medium border border-primary-800/30 transition-all overflow-hidden">
+                <span class="absolute inset-0 w-full h-full transition-all duration-300 scale-0 group-hover:scale-100 group-hover:bg-primary-500/10 rounded-lg"></span>
+                <span class="relative flex items-center justify-center">Learn More
+                  <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </span>
+              </a>
+            </div>
+            
+            <div class="mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-sm text-gray-400 animate-fade-in" style="animation-delay: 0.6s">
+              <div class="flex items-center px-3 py-1.5 bg-dark-light rounded-full border border-dark-lighter hover:border-primary-800/30 transition-colors">
+                <svg class="w-5 h-5 text-primary-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Free Options</span>
+              </div>
+              <div class="flex items-center px-3 py-1.5 bg-dark-light rounded-full border border-dark-lighter hover:border-primary-800/30 transition-colors">
+                <svg class="w-5 h-5 text-primary-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Regular Updates</span>
+              </div>
+              <div class="flex items-center px-3 py-1.5 bg-dark-light rounded-full border border-dark-lighter hover:border-primary-800/30 transition-colors">
+                <svg class="w-5 h-5 text-primary-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Developer Support</span>
+              </div>
+              <div class="flex items-center px-3 py-1.5 bg-dark-light rounded-full border border-dark-lighter hover:border-primary-800/30 transition-colors">
+                <svg class="w-5 h-5 text-primary-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>High Performance</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="flex-1 w-full max-w-xl mx-auto lg:mx-0 flex items-center justify-center">
+            <div class="h-100 flex items-center justify-center">
+              <!-- Just the logo, nothing else -->
+              <img src="/assets/img/Umbraix-Plugins-Trans.png" alt="Umbraix Plugins" class="w-84 h-auto" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-dark-base relative overflow-hidden">
+      <!-- Background decorative elements -->
+      <div class="absolute inset-0 overflow-hidden opacity-30">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-primary-600/5 rounded-full filter blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-primary-600/5 rounded-full filter blur-3xl"></div>
+      </div>
+      
+      <div class="container mx-auto px-4 md:px-6 relative z-10">
+        <div class="text-center mb-16">
+          <div class="inline-block relative">
+            <span class="absolute -top-10 left-1/2 transform -translate-x-1/2 text-xs font-semibold tracking-wider text-primary-400 uppercase bg-primary-900/30 px-3 py-1 rounded-full">Why Choose Us</span>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 relative inline-block">
+              <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary-400 via-primary-500 to-primary-400 animate-gradient">Premium Features</span>
+            </h2>
+          </div>
+          <p class="text-gray-400 max-w-2xl mx-auto text-lg">Our plugins are designed with these core principles to ensure the best experience for your Minecraft server</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          <!-- Feature 1: High Performance -->
+          <div class="bg-dark-light p-6 rounded-xl border border-dark-lighter hover:border-primary-600/30 transition-all duration-300 hover:shadow-xl hover:shadow-primary-900/10 transform hover:-translate-y-1 group">
+            <div class="bg-gradient-to-r from-primary-600 to-primary-700 text-white p-3 rounded-lg inline-flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-white">High Performance</h3>
+            <p class="text-gray-400">Optimized code that minimizes server impact while maximizing functionality and user experience.</p>
+          </div>
+          
+          <!-- Feature 2: Advanced Security -->
+          <div class="bg-dark-light p-6 rounded-xl border border-dark-lighter hover:border-primary-600/30 transition-all duration-300 hover:shadow-xl hover:shadow-primary-900/10 transform hover:-translate-y-1 group">
+            <div class="bg-gradient-to-r from-primary-900 to-primary-800 text-white p-3 rounded-lg inline-flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-white">Advanced Security</h3>
+            <p class="text-gray-400">Built with security in mind to protect your server and players from exploits and vulnerabilities.</p>
+          </div>
+          
+          <!-- Feature 3: Customizable -->
+          <div class="bg-dark-light p-6 rounded-xl border border-dark-lighter hover:border-primary-600/30 transition-all duration-300 hover:shadow-xl hover:shadow-primary-900/10 transform hover:-translate-y-1 group">
+            <div class="bg-gradient-to-r from-primary-700 to-primary-600 text-white p-3 rounded-lg inline-flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-white">Customizable</h3>
+            <p class="text-gray-400">Extensive configuration options allow you to tailor each plugin to your server's specific needs.</p>
+          </div>
+          
+          <!-- Feature 4: Scalable -->
+          <div class="bg-dark-light p-6 rounded-xl border border-dark-lighter hover:border-primary-600/30 transition-all duration-300 hover:shadow-xl hover:shadow-primary-900/10 transform hover:-translate-y-1 group">
+            <div class="bg-gradient-to-r from-primary-800 to-primary-700 text-white p-3 rounded-lg inline-flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-white">Scalable</h3>
+            <p class="text-gray-400">Designed to work efficiently on servers of all sizes, from small communities to large networks.</p>
+          </div>
+          
+          <!-- Feature 5: Premium Features -->
+          <div class="bg-dark-light p-6 rounded-xl border border-dark-lighter hover:border-primary-600/30 transition-all duration-300 hover:shadow-xl hover:shadow-primary-900/10 transform hover:-translate-y-1 group">
+            <div class="bg-gradient-to-r from-primary-600 to-primary-500 text-white p-3 rounded-lg inline-flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-white">Premium Features</h3>
+            <p class="text-gray-400">Advanced functionality that goes beyond basic plugins, offering unique and innovative features.</p>
+          </div>
+          
+          <!-- Feature 6: Regular Updates -->
+          <div class="bg-dark-light p-6 rounded-xl border border-dark-lighter hover:border-primary-600/30 transition-all duration-300 hover:shadow-xl hover:shadow-primary-900/10 transform hover:-translate-y-1 group">
+            <div class="bg-gradient-to-r from-primary-700 to-primary-600 text-white p-3 rounded-lg inline-flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-white">Regular Updates</h3>
+            <p class="text-gray-400">Consistent updates to ensure compatibility with the latest Minecraft versions and to add new features.</p>
+          </div>
+          
+          <!-- Feature 7: Developer Support -->
+          <div class="bg-dark-light p-6 rounded-xl border border-dark-lighter hover:border-primary-600/30 transition-all duration-300 hover:shadow-xl hover:shadow-primary-900/10 transform hover:-translate-y-1 group">
+            <div class="bg-gradient-to-r from-primary-800 to-primary-700 text-white p-3 rounded-lg inline-flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-white">Developer Support</h3>
+            <p class="text-gray-400">Dedicated support from our development team to help with installation, configuration, and troubleshooting.</p>
+          </div>
+          
+          <!-- Feature 8: Free Options -->
+          <div class="bg-dark-light p-6 rounded-xl border border-dark-lighter hover:border-primary-600/30 transition-all duration-300 hover:shadow-xl hover:shadow-primary-900/10 transform hover:-translate-y-1 group">
+            <div class="bg-gradient-to-r from-primary-600 to-primary-500 text-white p-3 rounded-lg inline-flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-white">Free Options</h3>
+            <p class="text-gray-400">A selection of high-quality free plugins alongside our premium offerings to suit every server's budget.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Plugin Showcase Section -->
+    <section id="plugins" class="py-20 bg-dark-light relative overflow-hidden">
+      <!-- Background decorative elements -->
+      <div class="absolute inset-0 overflow-hidden opacity-50">
+        <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary-600/5 rounded-full filter blur-3xl"></div>
+        <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-primary-600/5 rounded-full filter blur-3xl"></div>
+      </div>
+      <div class="container mx-auto px-4 md:px-6 relative z-10">
+        <div class="text-center mb-12">
+          <div class="inline-block relative">
+            <span class="absolute -top-10 left-1/2 transform -translate-x-1/2 text-xs font-semibold tracking-wider text-primary-400 uppercase bg-primary-900/30 px-3 py-1 rounded-full">Discover</span>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 relative inline-block">
+              <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary-400 via-primary-500 to-primary-400 animate-gradient">Featured Plugins</span>
+            </h2>
+          </div>
+          <p class="text-gray-400 max-w-2xl mx-auto text-lg">Explore our handpicked selection of premium Minecraft server plugins designed to enhance your gameplay experience</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Plugin Card 1 -->
+          <div class="bg-dark-base rounded-xl overflow-hidden border border-dark-lighter hover:border-primary-600/30 transition-all duration-300 hover:shadow-xl hover:shadow-primary-900/10 transform hover:-translate-y-1 group">
+            <div class="h-48 bg-gradient-to-br from-primary-600/20 to-primary-800/20 flex items-center justify-center overflow-hidden">
+              <div class="h-20 w-20 bg-primary-600 rounded-xl flex items-center justify-center text-white font-bold text-3xl group-hover:scale-110 transition-transform duration-300">
+                U
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-3">
+                <span class="text-xs font-medium px-2.5 py-0.5 rounded-full bg-primary-900/30 text-primary-300">Economy</span>
+                <span class="text-xs text-gray-400">v1.0.0</span>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Umbraix Jobs</h3>
+              <p class="text-gray-400 mb-4">A free Jobs Reborn alternative with advanced features and optimized performance.</p>
+              <div class="flex items-center justify-between">
+                <span class="text-primary-400 font-medium">Free</span>
+                <a href="/plugins/jobs" class="inline-flex items-center text-white bg-primary-600 hover:bg-primary-700 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors">
+                  View Details
+                  <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Plugin Card 2 -->
+          <div class="bg-dark-base rounded-xl overflow-hidden border border-dark-lighter hover:border-primary-600/30 transition-all duration-300 hover:shadow-xl hover:shadow-primary-900/10 transform hover:-translate-y-1 group">
+            <div class="h-48 bg-gradient-to-br from-primary-600/20 to-primary-800/20 flex items-center justify-center overflow-hidden">
+              <div class="h-20 w-20 bg-primary-600 rounded-xl flex items-center justify-center text-white font-bold text-3xl group-hover:scale-110 transition-transform duration-300">
+                U
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-3">
+                <span class="text-xs font-medium px-2.5 py-0.5 rounded-full bg-primary-900/30 text-primary-300">Utility</span>
+                <span class="text-xs text-gray-400">v2.1.0</span>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Umbraix Chat</h3>
+              <p class="text-gray-400 mb-4">Advanced chat formatting, channels, and moderation tools for your Minecraft server.</p>
+              <div class="flex items-center justify-between">
+                <span class="text-primary-400 font-medium">Premium</span>
+                <a href="/plugins/chat" class="inline-flex items-center text-white bg-primary-600 hover:bg-primary-700 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors">
+                  View Details
+                  <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Plugin Card 3 -->
+          <div class="bg-dark-base rounded-xl overflow-hidden border border-dark-lighter hover:border-primary-600/30 transition-all duration-300 hover:shadow-xl hover:shadow-primary-900/10 transform hover:-translate-y-1 group">
+            <div class="h-48 bg-gradient-to-br from-primary-600/20 to-primary-800/20 flex items-center justify-center overflow-hidden">
+              <div class="h-20 w-20 bg-primary-600 rounded-xl flex items-center justify-center text-white font-bold text-3xl group-hover:scale-110 transition-transform duration-300">
+                U
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-3">
+                <span class="text-xs font-medium px-2.5 py-0.5 rounded-full bg-primary-900/30 text-primary-300">Economy</span>
+                <span class="text-xs text-gray-400">v1.5.2</span>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Umbraix Shop</h3>
+              <p class="text-gray-400 mb-4">Create GUI shops with custom items, prices, and permissions for your server.</p>
+              <div class="flex items-center justify-between">
+                <span class="text-primary-400 font-medium">Free</span>
+                <a href="/plugins/shop" class="inline-flex items-center text-white bg-primary-600 hover:bg-primary-700 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors">
+                  View Details
+                  <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-12 text-center">
+          <a href="/plugins" class="inline-flex items-center px-6 py-3 rounded-lg bg-dark-base hover:bg-dark-lighter text-white font-medium border border-primary-800/30 transition-all group relative overflow-hidden">
+            <span class="absolute inset-0 w-full h-full transition-all duration-300 scale-0 group-hover:scale-100 group-hover:bg-primary-500/10 rounded-lg"></span>
+            <span class="relative flex items-center">
+              View All Plugins
+              <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-16 pb-20 relative overflow-hidden">
+      <!-- Premium animated background -->
+      <div class="absolute inset-0 bg-gradient-to-br from-primary-800/40 via-primary-900/30 to-dark-base animate-gradient" style="background-size: 200% 200%; animation-duration: 15s;"></div>
+      
+      <!-- Animated glowing orbs -->
+      <div class="absolute inset-0 overflow-hidden">
+        <!-- Large glowing orbs -->
+        <div class="absolute top-0 left-1/4 w-64 h-64 bg-primary-500/10 rounded-full filter blur-3xl animate-pulse-slow"></div>
+        <div class="absolute bottom-0 right-1/4 w-80 h-80 bg-primary-600/10 rounded-full filter blur-3xl animate-pulse-slow" style="animation-delay: 2s"></div>
+        
+        <!-- Smaller floating particles -->
+        <div class="absolute top-1/4 left-1/4 w-3 h-3 bg-primary-400/80 rounded-full animate-ping" style="animation-duration: 3s"></div>
+        <div class="absolute top-1/2 right-1/3 w-2 h-2 bg-primary-300/80 rounded-full animate-ping" style="animation-duration: 4s; animation-delay: 1s"></div>
+        <div class="absolute bottom-1/4 left-1/2 w-4 h-4 bg-primary-400/80 rounded-full animate-ping" style="animation-duration: 5s; animation-delay: 2s"></div>
+        <div class="absolute top-2/3 right-1/4 w-3 h-3 bg-primary-300/80 rounded-full animate-ping" style="animation-duration: 4.5s; animation-delay: 1.5s"></div>
+      </div>
+      
+      <!-- Animated grid pattern -->
+      <div class="absolute inset-0 opacity-10">
+        <div class="h-full w-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMxNWEzNGEiIGZpbGwtb3BhY2l0eT0iMC40Ij48cGF0aCBkPSJNMzYgMzRoLTJ2LTRoMnY0em0wLTZ2LTRoLTJ2NGgyek0yNCAxOHYtMmgtNHYyaDR6bTYgMTZ2LTRoLTJ2NGgyek0yNCAxOGgtNHY0aDR2LTR6bTAgNmgtNHY0aDR2LTR6bTAgNmgtNHY0aDR2LTR6Ii8+PC9nPjwvZz48L3N2Zz4=')]">
+        </div>
+      </div>
+      <div class="container mx-auto px-4 md:px-6 relative z-10">
+        <div class="bg-dark-light/80 backdrop-blur-md rounded-2xl p-8 md:p-12 shadow-2xl border border-primary-600/20 hover:border-primary-500/30 transition-all duration-500 group overflow-hidden">
+          <!-- Inner glow effect -->
+          <div class="absolute inset-0 bg-gradient-to-br from-primary-600/5 via-transparent to-primary-500/5 opacity-70 group-hover:opacity-100 transition-opacity duration-500"></div>
+          
+          <!-- Subtle animated corner accents -->
+          <div class="absolute top-0 left-0 w-16 h-16 overflow-hidden">
+            <div class="absolute top-0 left-0 w-16 h-1 bg-gradient-to-r from-primary-500/80 to-transparent transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700 ease-out"></div>
+            <div class="absolute top-0 left-0 h-16 w-1 bg-gradient-to-b from-primary-500/80 to-transparent transform -translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-out"></div>
+          </div>
+          <div class="absolute bottom-0 right-0 w-16 h-16 overflow-hidden">
+            <div class="absolute bottom-0 right-0 w-16 h-1 bg-gradient-to-l from-primary-500/80 to-transparent transform translate-x-full group-hover:translate-x-0 transition-transform duration-700 ease-out"></div>
+            <div class="absolute bottom-0 right-0 h-16 w-1 bg-gradient-to-t from-primary-500/80 to-transparent transform translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-out"></div>
+          </div>
+          
+          <div class="flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
+            <div class="max-w-2xl">
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary-900/50 text-primary-300 mb-4 border border-primary-800/30 shadow-lg shadow-primary-900/10">
+                <span class="w-2 h-2 rounded-full bg-primary-400 mr-2 animate-pulse"></span>
+                <span class="tracking-wide">Premium Quality</span>
+              </span>
+              <h2 class="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-primary-500 via-primary-400 to-primary-600 text-transparent bg-clip-text relative inline-block animate-gradient">Ready to enhance your Minecraft server?</h2>
+              <p class="text-gray-300 mb-0">Explore our collection of free and premium plugins to take your server to the next level.</p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="/plugins" class="group relative px-6 py-3 rounded-lg bg-primary-600 hover:bg-primary-700 text-white font-medium transition-all shadow-lg shadow-primary-600/20 hover:shadow-primary-600/40 text-center overflow-hidden">
+                <span class="absolute inset-0 w-full h-full transition-all duration-300 scale-0 group-hover:scale-100 group-hover:bg-primary-500/20 rounded-lg"></span>
+                <span class="relative flex items-center justify-center">Browse Plugins
+                  <svg class="w-5 h-5 ml-2 inline-block group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                  </svg>
+                </span>
+              </a>
+              <a href="/contact" class="group relative px-6 py-3 rounded-lg bg-dark-base hover:bg-dark-lighter text-white font-medium border border-primary-800/30 transition-all text-center overflow-hidden">
+                <span class="absolute inset-0 w-full h-full transition-all duration-300 scale-0 group-hover:scale-100 group-hover:bg-primary-500/10 rounded-lg"></span>
+                <span class="relative flex items-center justify-center">Contact Us
+                  <svg class="w-5 h-5 ml-2 inline-block group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <%- include('./componets/footer') %>
+  
+  <!-- Scripts -->
+  <script>
+    // Mobile menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+      
+      // Resources dropdown toggle for mobile
+      const mobileResourcesButton = document.getElementById('mobile-resources-button');
+      const mobileResourcesDropdown = document.getElementById('mobile-resources-dropdown');
+      
+      if (mobileResourcesButton && mobileResourcesDropdown) {
+        mobileResourcesButton.addEventListener('click', function() {
+          mobileResourcesDropdown.classList.toggle('hidden');
+        });
+      }
+    });
+  </script>
+</body>
+</html>
